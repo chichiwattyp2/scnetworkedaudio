@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "ClobberGroteskW01-Medium";
+  src: url("//db.onlinewebfonts.com/t/f4e31ff864f4297e98cd95bd1d07fd7b.eot");
+  src: url("//db.onlinewebfonts.com/t/f4e31ff864f4297e98cd95bd1d07fd7b.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/f4e31ff864f4297e98cd95bd1d07fd7b.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/f4e31ff864f4297e98cd95bd1d07fd7b.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/f4e31ff864f4297e98cd95bd1d07fd7b.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/f4e31ff864f4297e98cd95bd1d07fd7b.svg#ClobberGroteskW01-Medium")
+      format("svg");
+}
+
+body {
+  font-family: "ClobberGroteskW01-Medium";
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+#navCheckbox {
+  visibility: 0;
+  opacity: 0;
+  position: absolute;
+  top: -100%;
+  left: -100%;
+}
+#navCheckbox:checked + .navWrapper {
+  left: 0;
+}
+
+.navWrapper {
+  position: absolute;
+  left: -300px;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav {
+  background-color: #fff;
+  text-align: center;
+}
+.nav .nav__item {
+  display: block;
+}
+.nav .nav__item .nav__link {
+  display: block;
+  margin: 0;
+  color: #212429;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 18px;
+  transition: all 0.2s ease-in-out;
+}
+.nav .nav__item .nav__link:hover {
+  font-size: 18px;
+  text-decoration: underline;
+}
+.nav .nav__item:first-of-type {
+}
+.nav .nav__item:hover .nav__secondary {
+  max-height: 170px;
+}
+.nav .nav__secondary {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.nav .nav__secondary .nav__item:first-of-type {
+  border-top: none;
+}
+
+.navTrigger {
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 100%;
+  position: absolute;
+  top: 20px;
+  right: -70px;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  transform: rotate(0deg);
+}
+.navTrigger .navTrigger__icon {
+  display: block;
+  position: relative;
+  margin-top: 14px;
+}
+.navTrigger .navTrigger__icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #212429;
+  position: absolute;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+}
+.navTrigger .navTrigger__icon span:nth-of-type(1) {
+  top: -8px;
+}
+.navTrigger .navTrigger__icon span:nth-of-type(3) {
+  bottom: -11px;
+}
+.navTrigger:hover,
+.navTrigger.active {
+  transition: all 0.2s ease-in-out;
+  transform: rotate(180deg);
+}
+.navTrigger:hover .navTrigger__icon span:nth-of-type(1),
+.navTrigger.active .navTrigger__icon span:nth-of-type(1) {
+  transform: rotate(30deg);
+  top: 0;
+}
+.navTrigger:hover .navTrigger__icon span:nth-of-type(2),
+.navTrigger.active .navTrigger__icon span:nth-of-type(2) {
+  width: 0;
+  left: 50%;
+}
+.navTrigger:hover .navTrigger__icon span:nth-of-type(3),
+.navTrigger.active .navTrigger__icon span:nth-of-type(3) {
+  transform: rotate(-35deg);
+  bottom: -4px;
+}
